@@ -1,0 +1,35 @@
+<!-- categories section -->
+<div id="category">
+  <h1>Your Favourite Movies</h1>
+</div>
+
+<!-- movie preview favourite section-->
+<div  id="category-preview-wrapper">
+  <div *ngIf= "favouriteMovies.length == 0"  class=no-fav-movie>
+    <p>Oops! You have no fovourite movies</p>
+    <p>Add From Home Page</p>
+  </div>
+  <!-- category card -->
+  <div *ngFor = "let favouriteMovie of favouriteMovies" class="movie-container">
+    <div class="movie-details-container">
+      <a (click)="onShowMovie(favouriteMovie.id)">
+        <div class="img-container-home">
+          <img src="https://image.tmdb.org/t/p/original{{ favouriteMovie.poster_path }}" alt="" />
+          <p class="more-info">click for more info</p>
+        </div>
+      </a>
+      <p><strong>title:</strong> {{favouriteMovie.title}}</p>
+      <p><strong>released year:</strong> {{favouriteMovie.release_date}}</p>
+    </div>
+    <button class="addTo-category" (click)="removeFav(favouriteMovie.id)">
+      <i class="fa fa-times-circle"></i>Remove Favourite
+    </button>
+  </div>
+
+</div>
+<!-- favourite button click section. But click to go home page here -->
+<div id="fovourite-btn-wrapper">
+  <button class="fovourite-btn">
+    <a routerLink="">go back to home page</a>
+  </button>
+</div>

@@ -1,0 +1,17 @@
+.no-fav-movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  grid-column: -1/1;
+}
+.no-fav-movie p {
+  font-size: 1.4rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.btn-fav{
+  background-color: rgb(74, 133, 158);
+}

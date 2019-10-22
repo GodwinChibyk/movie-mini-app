@@ -1,0 +1,19 @@
+
+    <!-- Main page contents -->
+    <header id="header-top" class="main-header">
+        <div class="logo"><a routerLink=""><img src="assets/images/logo.webp" alt="logo"></a></div>
+        <nav class="main-nav">
+          <ul>
+            <li><a routerLink="/">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a routerLink="/favourite">favourite</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </nav>
+        <div class="search-bar">
+          <label for="search">
+            <input type="text" id="search" placeholder="search movies" #searchInput>
+            <button class="search-btn" (click)="doSearch(searchInput.value)"><i class="fa fa-search"></i></button>
+          </label>
+        </div>
+      </header>

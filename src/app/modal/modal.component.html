@@ -1,0 +1,43 @@
+<div *ngIf="modalMovie" class="movie-detail-modal-wrapper" [ngClass]="showModal">
+  <!-- Modal box for movie details -->
+  <div class="modal-container">
+    <button (click)="closeModal()" class="exit-btn">
+      <i class="fa fa-times"></i>
+    </button>
+    <div id="movie-details-wrapper">
+      <h1 class="movie-info">movie info</h1>
+
+      <!-- movie cover image wrapper -->
+      <div class="image-section-wrapper">
+        <div class="img-container">
+          <img
+            src="https://image.tmdb.org/t/p/original{{
+              modalMovie.poster_path
+            }}"
+            class="responsive" alt="" 
+          />
+        </div>
+      </div>
+      <!-- movie decriptions/details wrapper -->
+      <div class="descriptions-wrapper">
+        <h2 class="title">title:</h2>
+        <p>{{ modalMovie.title }}</p>
+        <br />
+        <h2 class="release">release:</h2>
+        <p>{{ modalMovie.release_date }}</p>
+        <br />
+        <h2 class="id">movie id:</h2>
+        <p>{{modalMovie.id}}</p>
+        <br />
+        <h2 class="language">language:</h2>
+        <p>{{modalMovie.original_language}}</p>
+        <br />
+        <h2 class="rate">rate:</h2>
+        <p>{{modalMovie.vote_average}}</p>
+        <br />
+        <h2 class="over-view">overview:</h2>
+        <p>{{modalMovie.overview}}</p>
+      </div>
+    </div>
+  </div>
+</div>

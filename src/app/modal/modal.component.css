@@ -1,0 +1,9 @@
+
+.open-movie {
+  display: flex;
+}
+
+.over-view ~ p {
+  text-align: justify;
+  font-weight: lighter;
+}

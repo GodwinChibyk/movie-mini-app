@@ -1,0 +1,128 @@
+<!--all category preview section-->
+
+    <!-- Horror movie category -->
+    <div id="category-preview-wrapper">
+        <h2>Horror Movies</h2>
+  
+        <!-- category card -->
+            <div *ngFor="let horrorMovie of horrorMovies" class="movie-container">
+                <div 
+                class="movie-details-container">
+                  <a (click)="onShowMovie(horrorMovie.id)" >
+                    <div  class="img-container-home"><img  
+                      src="https://image.tmdb.org/t/p/original{{ horrorMovie.poster_path }}"
+                      alt="">
+                      <p class="more-info">click for more info</p>
+                    </div>
+                  </a>
+                  <p><strong>title:</strong> {{horrorMovie.title}}</p>
+                  <p><strong>released year:</strong> {{horrorMovie.release_date}}</p>
+                </div>
+                <button 
+                (click)="onAddToFavourite(horrorMovie.id)" 
+                id="horror" class="addTo-category" [ngClass]="isFav(horrorMovie.id)? 'btn-fav': ''" >
+                  
+                  <span *ngIf="!isFav(horrorMovie.id)">
+                    <i class="fa fa-plus"></i>
+                  Add To Favourite
+                  </span>
+
+
+                  <span *ngIf="isFav(horrorMovie.id)">
+                    Added
+                    </span>
+
+                </button>
+              </div>
+  
+      </div>
+
+      <!-- Romance movie category -->
+    <div id="category-preview-wrapper">
+        <h2>Romance Movies</h2>
+  
+        <!-- category card -->
+            <div *ngFor = "let romanceMovie of romanceMovies" id="drama" class="movie-container">
+                <div class="movie-details-container">
+                  <a (click)="onShowMovie(romanceMovie.id)">
+                    <div class="img-container-home"><img src="https://image.tmdb.org/t/p/original{{ romanceMovie.poster_path }}"  alt="">
+                      <p class="more-info">click for more info</p>
+                    </div>
+                  </a>
+                  <p><strong>title:</strong> {{romanceMovie.title}}</p>
+                  <p><strong>released year:</strong> {{romanceMovie.release_date}}</p>
+                </div>
+                <button (click)="onAddToFavourite(romanceMovie.id)" id="romance" class="addTo-category" [ngClass]="isFav(romanceMovie.id)? 'btn-fav': ''" >
+                   
+                    <span *ngIf="!isFav(romanceMovie.id)">
+                        <i class="fa fa-plus"></i>
+                      Add To Favourite
+                      </span>
+    
+    
+                      <span *ngIf="isFav(romanceMovie.id)">
+                        Added
+                        </span>
+                </button>
+              </div>
+  
+      </div>
+
+      <!-- Drama movie category -->
+    <div id="category-preview-wrapper">
+        <h2>Drama Movies</h2>
+  
+        <!-- category card -->
+            <div *ngFor = "let dramaMovie of dramaMovies"  class="movie-container">
+                <div class="movie-details-container">
+                  <a (click)="onShowMovie(dramaMovie.id)">
+                    <div class="img-container-home"><img  src="https://image.tmdb.org/t/p/original{{ dramaMovie.poster_path }}" alt="">
+                      <p class="more-info">click for more info</p>
+                    </div>
+                  </a>
+                  <p><strong>title:</strong> {{dramaMovie.title}}</p>
+                  <p><strong>released year:</strong> {{dramaMovie.release_date}}</p>
+                </div>
+                <button (click)="onAddToFavourite(dramaMovie.id)" id="drama" class="addTo-category" [ngClass]="isFav(dramaMovie.id)? 'btn-fav': ''" >
+                   
+                    <span *ngIf="!isFav(dramaMovie.id)">
+                        <i class="fa fa-plus"></i>
+                      Add To Favourite
+                      </span>
+    
+    
+                      <span *ngIf="isFav(dramaMovie.id)">
+                        Added
+                        </span>
+                </button>
+              </div>
+      </div>
+
+       <!-- Other movie category -->
+    <div id="category-preview-wrapper">
+        <h2>Other Movies</h2>
+  
+        <!-- category card -->
+            <div *ngFor = "let otherMovie of otherMovies" class="movie-container">
+                <div class="movie-details-container">
+                  <a (click)="onShowMovie(otherMovie.id)">
+                    <div  class="img-container-home"><img  src="https://image.tmdb.org/t/p/original{{ otherMovie.poster_path }}" alt="">
+                      <p class="more-info">click for more info</p>
+                    </div>
+                  </a>
+                  <p><strong>title:</strong> {{otherMovie.title}}</p>
+                  <p><strong>released year:</strong> {{otherMovie.release_date}}</p>
+                </div>
+                <button (click)="onAddToFavourite(otherMovie.id)" id="other" class="addTo-category" [ngClass]="isFav(otherMovie.id)? 'btn-fav': ''" > 
+                    <span *ngIf="!isFav(otherMovie.id)">
+                      <i class="fa fa-plus"></i>
+                    Add To Favourite
+                    </span>
+  
+  
+                    <span *ngIf="isFav(otherMovie.id)">
+                      Added
+                      </span>
+                </button>
+              </div>
+      </div>
